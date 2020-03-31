@@ -30,7 +30,7 @@ UNSAFE_componentWillMount(){
 async showDirectionsOnMap(placeId){
   const{userLatitude,userLongitude} =this.state;
 try{
-  const result = await axios.get(`https://maps.googleapis.com/maps/api/directions/json?origin=${userLatitude},${userLongitude}&destination=place_id:${placeId}&key=AIzaSyCozLIM_ekUBtCbp4sptKSpNUepCYefy9k`);
+  const result = await axios.get(`https://maps.googleapis.com/maps/api/directions/json?origin=${userLatitude},${userLongitude}&destination=place_id:${placeId}&key="API KEY"`);
 console.log(result.data);
 }catch(err){
   console.error(err);
