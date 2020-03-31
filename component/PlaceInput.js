@@ -25,7 +25,7 @@ export default class PlaceInput extends Component {
     async getPlaces(input) {
         const { userLatitude, userLongitude } = this.props;
         const result = await axios.get(
-            `https://maps.googleapis.com/maps/api/place/autocomplete/json?key=AIzaSyCozLIM_ekUBtCbp4sptKSpNUepCYefy9k&input=${input}&location=${userLatitude},${userLongitude}&radius=2000`
+            `https://maps.googleapis.com/maps/api/place/autocomplete/json?key="API KEY"&input=${input}&location=${userLatitude},${userLongitude}&radius=2000`
         );
         this.setState({ predictions: result.data.predictions });
     }
